@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Visita</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Início</a>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <h2 class="mb-4">Agendar Visita a um Imóvel</h2>
+        <form id="visitaForm" class="card p-4">
+            <div class="mb-3">
+                <label for="clienteNome" class="form-label">Seu nome</label>
+                <input type="text" class="form-control" id="clienteNome" required>
+            </div>
+            <div class="mb-3">
+                <label for="clienteEmail" class="form-label">Seu email</label>
+                <input type="email" class="form-control" id="clienteEmail" required>
+            </div>
+            <div class="mb-3">
+                <label for="casaSelect" class="form-label">Escolha a casa</label>
+                <select class="form-select" id="casaSelect" required>
+                    <option value="" disabled selected>Selecione uma casa</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="corretorSelecionado" class="form-label">Corretor responsável</label>
+                <input type="text" class="form-control" id="corretorSelecionado" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="dataVisita" class="form-label">Data da visita</label>
+                <input type="date" class="form-control" id="dataVisita" required>
+            </div>
+            <div class="mb-3">
+                <label for="horaVisita" class="form-label">Horário</label>
+                <input type="time" class="form-control" id="horaVisita" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar Visita</button>
+        </form>
+        <div id="visitaSucesso" class="alert alert-success mt-4" style="display:none;">Visita agendada com sucesso!</div>
+    </div>
+    <script src="js/agendar_visita.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
