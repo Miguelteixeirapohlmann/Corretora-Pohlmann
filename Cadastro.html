@@ -18,83 +18,93 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 bg-white" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand text-dark" href="index.html">Tela Inicial</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link text-dark" href="alugar.html">Alugar</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="Compra.html">Compra</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#services">Descobrir</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#Final">Ajuda</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="agendar_visita.html">Agendar Visita</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="Login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="Cadastro.html">Registrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="cadastro-container">
         <div class="cadastro-header">
-            <i class="bi bi-person-plus-fill"></i>
-            <h2>Crie sua conta</h2>
-            <p>Leva menos de um minuto para se cadastrar</p>
+            <i class="bi bi-person-plus-fill text-dark"></i>
+            <h2 class="text-dark">Crie sua conta</h2>
+            <p class="text-dark">Leva menos de um minuto para se cadastrar</p>
         </div>
-        
         <form>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-outline mb-4">
-                        <input type="text" id="firstName" class="form-control" required />
-                        <label class="form-label" for="firstName">Nome</label>
+                        <input type="text" id="firstName" class="form-control text-dark" required />
+                        <label class="form-label text-dark" for="firstName">Nome</label>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-outline mb-4">
-                        <input type="text" id="lastName" class="form-control" required />
-                        <label class="form-label" for="lastName">Sobrenome</label>
+                        <input type="text" id="lastName" class="form-control text-dark" required />
+                        <label class="form-label text-dark" for="lastName">Sobrenome</label>
                     </div>
                 </div>
             </div>
-            
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-outline mb-4">
-                        <input type="text" id="cpf" class="form-control" required 
+                        <input type="text" id="cpf" class="form-control text-dark" required 
                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
                                title="Formato: 000.000.000-00" />
-                        <label class="form-label" for="cpf">CPF</label>
-                        <small class="text-muted">Formato: 000.000.000-00</small>
+                        <label class="form-label text-dark" for="cpf">CPF</label>
+                        <small class="text-dark">Formato: 000.000.000-00</small>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-outline mb-4">
-                        <input type="tel" id="phone" class="form-control" required 
+                        <input type="tel" id="phone" class="form-control text-dark" required 
                                pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" 
                                title="Formato: (00) 00000-0000" />
-                        <label class="form-label" for="phone">Telefone</label>
-                        <small class="text-muted">Formato: (00) 00000-0000</small>
+                        <label class="form-label text-dark" for="phone">Telefone</label>
+                        <small class="text-dark">Formato: (00) 00000-0000</small>
                     </div>
                 </div>
             </div>
-            
             <div class="form-outline mb-4">
-                <input type="email" id="email" class="form-control" required />
-                <label class="form-label" for="email">Endereço de email</label>
+                <input type="email" id="email" class="form-control text-dark" required />
+                <label class="form-label text-dark" for="email">Endereço de email</label>
             </div>
-            
             <div class="form-outline mb-4">
-                <input type="password" id="password" class="form-control" required 
+                <input type="password" id="password" class="form-control text-dark" required 
                        oninput="updatePasswordStrength(this.value)" />
-                <label class="form-label" for="password">Senha</label>
+                <label class="form-label text-dark" for="password">Senha</label>
                 <div class="pass-strength">
                     <div class="pass-strength-bar" id="passwordStrength"></div>
                 </div>
-                <small class="text-muted">Mínimo de 8 caracteres</small>
+                <small class="text-dark">Mínimo de 8 caracteres</small>
             </div>
-            
             <div class="form-outline mb-4">
-                <input type="password" id="confirmPassword" class="form-control" required />
-                <label class="form-label" for="confirmPassword">Confirme sua senha</label>
+                <input type="password" id="confirmPassword" class="form-control text-dark" required />
+                <label class="form-label text-dark" for="confirmPassword">Confirme sua senha</label>
             </div>
-            
             <div class="form-check mb-4">
                 <input class="form-check-input" type="checkbox" id="termsCheck" required />
-                <label class="form-check-label" for="termsCheck">
-                    Eu concordo com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a>
+                <label class="form-check-label text-dark" for="termsCheck">
+                    Eu concordo com os <a href="#" class="text-dark">Termos de Serviço</a> e <a href="#" class="text-dark">Política de Privacidade</a>
                 </label>
             </div>
-            
             <button type="submit" class="btn btn-cadastrar">
                 <i class="bi bi-person-plus me-2"></i> Cadastrar
             </button>
-            
             <div class="login-link">
-                <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+                <p class="text-dark">Já tem uma conta? <a href="login.html" class="text-dark">Faça login</a></p>
             </div>
         </form>
     </div>
